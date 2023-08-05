@@ -1,0 +1,531 @@
+@font-face {
+    font-family: PlusJakartaSans;
+    src: url('PlusJakartaSans/PlusJakartaSans-Regular.ttf');
+  }
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'PlusJakartaSans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    color:black;
+    text-align: center;
+}
+
+h1 {
+    text-align:center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2 {
+    text-align:center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0rem;
+    padding: 0;
+}
+
+h3 {
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+a:link {
+    color: #337097
+}
+    
+a:visited {
+    color: #337097;
+}
+
+/*-------------------------------------------------------------------------------------------------
+
+Headlines
+
+-------------------------------------------------------------------------------------------------*/
+
+.headline-background-margin {
+    background-color: #337097;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.headline {
+    max-width: 1000px;
+    font-size: 20px;
+    padding: 2rem 1.5rem;
+}
+
+.headline-title {
+    font-size: 30px;
+}
+
+@media screen and (min-width:50em) {
+    .headline {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 25px;
+    }
+
+    .headline-title {
+        font-size: 50px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (min-width:74em) {
+    .headline {
+        padding-top: 90px;
+        padding-bottom: 90px;
+        font-size: 30px;
+    }
+    .headline-title {
+        font-size: 60px;
+        padding-bottom: 20px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------
+
+Navbar
+
+-------------------------------------------------------------------------------------------------*/
+
+.navbar {
+    background-color: #FFFFFF;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+ }
+
+.navbar-name {
+    color: black;
+    font-size: 32px;
+    font-weight: bolder;
+    text-decoration: none;
+    margin-top:.5em;
+    margin-bottom:.5em;
+}
+
+.logo-container {
+display: flex;
+align-items: center;
+}
+
+.logo {
+width: 50px;
+margin-right: .5em;
+margin-left: .5em;
+}
+
+@media screen and (min-width:74em) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+     }
+
+    .navbar-name {
+        margin-left: 1em;
+        margin-top: .5em;
+        margin-bottom: .5em;
+        }
+  
+    .logo-container {
+        display: flex;
+        justify-content:right;
+        margin-right: 1em;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------
+
+Expertise
+
+-------------------------------------------------------------------------------------------------*/
+
+.expertise-background {
+    background-color:whitesmoke;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.how-people-learn, .data-driven-insights, .experience-design {
+    padding-top: 1rem;
+    background-color: rgb(230,230,230);
+    padding: 1.5rem;
+    margin-inline: auto;
+    max-width: 290px;
+    border-radius: 10px;
+}
+
+.how-people-learn {
+    grid-area: learn;
+}
+
+.experience-design {
+    grid-area: design;
+}
+
+.data-driven-insights {
+    grid-area: data;
+   
+}
+
+.expertise {
+    grid-area: expertise;
+    color:black;
+}
+
+.grid-expertise {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    column-gap: 1rem;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    grid-template-areas:
+    'expertise'
+    'learn'
+    'design'
+    'data';
+}
+
+@media screen and (min-width: 50em) {
+    .grid-expertise {
+        display: grid;
+        grid-template-columns: 1fr 500px 1fr;
+        column-gap: 2.5rem;
+        grid-template-areas:
+        '... expertise ...'
+        '... learn ...' 
+        '... design ...'
+        '... data ...';
+        }
+    .how-people-learn, .data-driven-insights, .experience-design {
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width: 74em) {
+    .grid-expertise {
+        display: grid;
+        grid-template-columns: 1fr 340px 340px 340px 1fr;
+        column-gap: 2.5rem;
+        row-gap: 2.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        grid-template-areas:
+        '... ... expertise ... ...'
+        '... learn design data ...';
+    }
+    .how-people-learn, .data-driven-insights, .experience-design {
+        max-width: 450px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------
+
+Experience | Mayo Clinic + Michigan State University
+
+-------------------------------------------------------------------------------------------------*/
+
+.experience-background {
+    background-color:whitesmoke;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.date-range {
+    margin-top: 10px;
+}
+
+.mayo-column1, .mayo-column2, .mayo-column3, .mayo-column4, .mayo-column5, .mayo-column6, .msu-column1, .msu-column2, .msu-column3, .msu-column4, .msu-column5, .msu-column6 {
+    padding-top: 1rem;
+    background-color: rgb(230,230,230);
+    padding: 1.5rem;
+    margin-inline: auto;
+    max-width: 290px;
+    border-radius: 10px;
+}
+
+.mayo {
+    grid-area: mc;
+    margin-inline: auto;
+}
+
+.mayo-column1 {
+    grid-area: mc1;
+}
+
+.mayo-column2 {
+    grid-area: mc2;
+}
+
+.mayo-column3 {
+    grid-area: mc3;
+}
+
+.mayo-column4 {
+    grid-area: mc4;
+}
+
+.mayo-column5 {
+    grid-area: mc5;
+}
+
+.mayo-column6 {
+    grid-area: mc6;
+}
+
+.divider {
+    grid-area: divider;
+    color: lightgray;
+    text-align: center;
+    width: 290px;
+}
+
+.msu {
+    grid-area: msu;
+    margin-inline: auto;
+}
+
+.msu-column1 {
+    grid-area: msu1;
+}
+
+.msu-column2 {
+    grid-area: msu2;
+}
+
+.msu-column3 {
+    grid-area: msu3;
+}
+
+.msu-column4 {
+    grid-area: msu4;
+}
+
+.msu-column5 {
+    grid-area: msu5;
+}
+
+.msu-column6 {
+    grid-area: msu6;
+}
+
+.grid-experience {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    font-size: 18px;
+    text-align: center;
+    grid-template-areas:
+    'mc'
+    'mc1'
+    'mc2'
+    'mc3'
+    'mc4'
+    'mc5'
+    'mc6'
+    'divider'
+    'msu'
+    'msu1'
+    'msu2'
+    'msu3'
+    'msu4'
+    'msu5'
+    'msu6'
+}
+
+@media screen and (min-width: 50em) {
+    .grid-experience {
+        display: grid;
+        grid-template-columns: 1fr 500px 1fr;
+        column-gap: 2.5rem;
+        grid-template-areas:
+        '... mc ...' 
+        '... mc1 ...'
+        '... mc2 ...'
+        '... mc3 ...'
+        '... mc4 ...'
+        '... mc5 ...'
+        '... mc6 ...'
+        '... divider ...'
+        '... msu ...'
+        '... msu1 ...'
+        '... msu2 ...'
+        '... msu3 ...'
+        '... msu4 ...'
+        '... msu5 ...'
+        '... msu6 ...';
+    }
+    .mayo, .msu, .mayo-column1, .mayo-column2, .mayo-column3, .mayo-column4, .mayo-column5, .mayo-column6, .msu-column1, .msu-column2, .msu-column3, .msu-column4, .msu-column5, .msu-column6 {
+        max-width: 500px;
+    }
+
+    .divider {
+        width: 500px;
+    }
+
+    .experience-h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 74em) {
+    .grid-experience {
+        display: grid;
+        grid-template-columns: 1fr 340px 340px 340px 1fr;
+        column-gap: 2.5rem;
+        row-gap: 2.5rem;
+        grid-template-areas:
+        '... mc mc mc ...'
+        '... mc1 mc2 mc3 ...'
+        '... mc4 mc5 mc6 ...'
+        '... divider divider divider ...'
+        '... msu msu msu ...'
+        '... msu1 msu2 msu3 ...'
+        '... msu4 msu5 msu6 ...';
+    }
+    .mayo-column1, .mayo-column2, .mayo-column3, .mayo-column4, .mayo-column5, .mayo-column6, .msu-column1, .msu-column2, .msu-column3, .msu-column4, .msu-column5, .msu-column6 {
+        max-width: 340px;
+    }
+
+    .divider {
+        width: 1100px;
+    }
+
+    .mayo, .msu {
+        max-width: 1100px;
+    }
+    .mayo-description {
+        padding: 0 100px;
+        padding-bottom: 30px;
+        font-size: 18px;
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------
+
+About Me | Vision + Mission
+
+-------------------------------------------------------------------------------------------------*/
+
+.vision, .mission, .about-me {
+    padding-top: 1rem;
+    background-color: rgb(230,230,230);
+    padding: 1.5rem;
+    margin-inline: auto;
+    max-width: 290px;
+    border-radius: 10px;
+}
+
+.vision {
+    grid-area: vision;
+}
+
+.mission {
+    grid-area: mission;
+   
+}
+
+.h2-about-me {
+    grid-area: about-me;
+    color:black;
+}
+
+.grid-about-me {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    column-gap: 1rem;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    grid-template-areas:
+    'about-me'
+    'vision'
+    'mission';
+}
+
+@media screen and (min-width: 50em) {
+    .grid-about-me {
+        display: grid;
+        grid-template-columns: 1fr 550px 1fr;
+        column-gap: 2.5rem;
+        grid-template-areas:
+        '... about-me ...'
+        '... vision ...' 
+        '... mission ...';
+        }
+    .vision, .mission {
+        max-width: 550px;
+    }
+}
+
+@media screen and (min-width: 74em) {
+    .grid-about-me {
+        display: grid;
+        grid-template-columns: 1fr 550px 550px 1fr;
+        column-gap: 2.5rem;
+        row-gap: 2.5rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        grid-template-areas:
+        '... about-me about-me ...'
+        '... vision mission ...';
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------
+
+Footer
+
+-------------------------------------------------------------------------------------------------*/
+
+footer {
+    margin-top:.5em;  
+}
+
+.footer-background {
+    padding: 30px;
+}
+
+.footer-cta {
+    font-size: 24px;
+}
+
+.footer-logo-container {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+    
+.footer-logo {
+    width: 50px;
+    margin-right: .5em;
+    margin-left: .5em;
+}
+
+
+
+
+  
+    
+    
